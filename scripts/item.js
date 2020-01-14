@@ -1,25 +1,19 @@
 export default {validateName, create} ;
 
-
-let name = ""
-
-
 function validateName(name){
-try {  
-   if (name.length === 0) {throw "Name Must Not Be Blank"
-      }
-   catch (err){
-      //Block of code to handle errors
-      }
-   finally {
-       create(name)
-   }
+try {
+   
+    let name = ''
 
+    if (name.length === 0){
+        throw TypeError('Name must not be blank')}}
+    
+catch(err){
+        console.log('Error: Blank Name')}
+    }
 
 function create(name){
-    return{
-        id: cuid(),
-        name: 'name',
-        checked: false;
-    }
-}
+    return
+    {id: cuid(),
+    name: '',
+    checked: false}};
