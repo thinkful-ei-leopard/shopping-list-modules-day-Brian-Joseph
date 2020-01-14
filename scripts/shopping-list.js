@@ -45,14 +45,14 @@ const render = function () {
 
 const addItemToShoppingList = function (itemName) {
   try {
-    item.validateName(name);
+    item.validateName(itemName);
     // create a new item if name is valid
-    store.items.push(item.create(name));
+    store.items.push(item.create(itemName));
     render();
   } catch(error) {
     console.log(`Cannot add item: ${error.message}`);
   }
-});
+};
 
 const handleNewItemSubmit = function () {
   $('#js-shopping-list-form').submit(function (event) {
