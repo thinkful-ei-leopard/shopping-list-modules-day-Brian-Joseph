@@ -1,5 +1,5 @@
 import item from './item.js';
-import store from './item.js';
+import store from './store.js';
 
 const generateItemElement = function (item) {
   let itemTitle = `<span class="shopping-item shopping-item__checked">${item.name}</span>`;
@@ -32,6 +32,7 @@ const generateShoppingItemsString = function (shoppingList) {
 
 const render = function () {
   // Filter item list if store prop is true by item.checked === false
+  console.log(store.items);
   let items = [...store.items];
   if (store.hideCheckedItems) {
     items = items.filter(item => !item.checked);
